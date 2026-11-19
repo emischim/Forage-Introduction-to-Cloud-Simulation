@@ -23,10 +23,13 @@ jobs:
           echo "Project: Forage Introduction to Cloud Simulation"
           echo "Engineer: Emmanuel Isa"
 
+
       - name: Display deployment environment
-        run: echo "Deployment environment: $DEPLOYMENT_ENV"
+        run: |
+          echo "Deployment environment: $DEPLOYMENT_ENV"
         env:
           DEPLOYMENT_ENV: ${{ vars.DEPLOYMENT_ENV }}
+
 
       - name: Confirm successful execution
         run: echo "GitHub Actions workflow completed successfully!"

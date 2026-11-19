@@ -1,0 +1,27 @@
+name: First GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    name: Run First DevOps Workflow
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display welcome message
+        run: echo "Hello! My first GitHub Actions workflow is running."
+
+      - name: Display project information
+        run: |
+          echo "Project: Forage Introduction to Cloud Simulation"
+          echo "Engineer: Emmanuel Isa"
+
+      - name: Confirm successful execution
+        run: echo "GitHub Actions workflow completed successfully!"
